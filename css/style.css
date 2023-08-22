@@ -1,0 +1,259 @@
+@font-face {
+    font-family: "Bodega Sans";
+    src: url(../assets/fonts/BodegaSans_Black.ttf);
+}
+
+:root{
+    --orange-color: #ff9d00;
+    --grey-color: #333333;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: #444 url(../assets//img/bg_body.svg);
+    font-size: 1.6rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    line-height: 2;
+}
+
+h1 {
+    font-size: 4rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h2 {
+    padding: 2rem;
+    font-size: 3rem;
+    text-transform: uppercase;
+    /*
+    Effet de bordure avec border
+    border-top: 3px solid rgba(0, 0, 0, .075);
+	border-left: 3px solid rgba(0, 0, 0, .075);
+	*/
+	
+	/* Effet de bordure avec une ombre sur la boite */
+	box-shadow: -2px -2px 3px 0px rgba(0, 0, 0, .2);
+}
+
+h3 {
+    text-align: center;
+    color: var(--orange-color);
+    text-transform: uppercase;
+}
+
+h3,
+nav a{
+    font-size: 2.5rem;
+}
+
+h1,
+h2,
+h3,
+nav {
+    font-family: "Bodega Sans";
+}
+
+main {
+    max-width: 1500px;
+    padding: 5%;
+}
+
+.orange-txt {
+    color: var(--orange-color);
+}
+
+hr {
+    height: 2px;
+    width: 90%;
+    margin: 1rem auto 2rem;
+    background-color: var(--orange-color);
+    border-width: 0;
+}
+
+section:nth-child(2) p {
+    color: #666;
+}
+
+section:nth-child(3){
+    margin-top: 5rem;
+}
+section:nth-child(3) p,
+section:nth-child(3) aside,
+section:nth-child(3) figure {
+    padding: 0 2rem;
+}
+
+img,
+video{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* SLIDER */
+.slider-figure:not(.is-active){
+    display: none;
+}
+
+.slider {
+    position: relative;
+    border: 3px solid white;
+}
+
+.fa-arrow-left,
+.fa-arrow-right {
+    color: var(--orange-color);
+}
+
+.slider figcaption {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: rgba(51, 51, 51, 0.536);
+    padding-left: 1rem;
+}
+
+.slider-nav a {
+    position: absolute;
+}
+
+.slider-nav a:nth-child(1) {
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+}
+
+.slider-nav a:nth-child(2) {
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+}
+
+.slider-nav a {
+    background-color: rgba(255, 255, 255, 0.784);
+    width: 5rem;
+    border-radius: 50%;
+    text-align: center;
+}
+
+/* HEADER */
+body > header {
+    padding: 2%;
+    background: rgb(255,255,255);
+    background: linear-gradient(145deg, white 0%, white 55%, #333 55%, #333 100%);    
+    box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, .2);
+}
+
+body > header img {
+    width: 150px;
+}
+
+body > header nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+body > header nav a{
+    text-decoration: none;
+    color: var(--orange-color);
+}
+
+/* MAIN */
+
+main header {
+    padding-bottom: 5rem;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+section figcaption {
+    color: var(--orange-color);
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+}
+
+article {
+    padding: 5%;
+    background-color: #fff;
+}
+
+article p {
+    text-align: center;
+}
+
+.btn-read-more{
+    display: block;
+    width: 100%;
+    margin-top: 1.5rem;
+    padding: 2%;
+    background-color: var(--orange-color);
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.fa-brands{
+    color: var(--orange-color);
+    font-size: 3rem;
+    opacity: 0.6;
+}
+
+footer {
+    text-align: center;
+    padding: 5% 0 2%;
+    box-shadow: 0px -6px 6px 0px rgba(0, 0, 0, .2);
+}
+
+@media screen and (min-width: 768px) {
+    body > header {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    main {
+        margin: auto;
+    }
+
+    section > * {
+        flex: 1;
+    }
+
+    section:nth-child(2) h2,
+    section:nth-child(3) h2 {
+        flex: 100%;
+    }
+    
+    section:nth-child(2),
+    section:nth-child(3) {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+  
+}
